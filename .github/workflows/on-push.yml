@@ -1,12 +1,12 @@
 name: deploy to ghcr.io
 on:
   push:
-    branches: [ main ]
+    branches: [ main, 22 ]
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NODE_VERSION: 18
+      NODE_VERSION: 22
     steps:
       - name: Check Out Repo
         uses: actions/checkout@v2
